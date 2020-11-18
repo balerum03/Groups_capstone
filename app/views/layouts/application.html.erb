@@ -4,12 +4,16 @@
     <title>GroupsCapstone</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= log_or_not[0] %>
+    <%= log_or_not[1] %>
+    <% if logged_in? %>
+      <%= current_user.user_name %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
