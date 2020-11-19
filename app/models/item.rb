@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
   belongs_to :user
-  has_many :groups
+  has_many :group_of_items
+  has_many :groups, through: :group_of_items
 end
