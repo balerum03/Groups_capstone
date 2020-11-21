@@ -9,13 +9,14 @@
   </head>
 
   <body>
-    <%= log_or_not[0] %>
-    <%= log_or_not[1] %>
-    <% if logged_in? %>
-    <div class="bg-danger">
-      <%= current_user.user_name %>
-    </div>
-    <% end %>
-    <%= yield %>
+    <div class="row">
+      <div class="col-3">
+        <%= log_or_not[0] %></br>
+        <%= log_or_not[1] %>
+      </div>
+      <div class="col-9">
+        <%= yield %>
+      </div>
+  </div>
   </body>
 </html>
