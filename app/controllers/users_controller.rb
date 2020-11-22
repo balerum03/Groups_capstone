@@ -61,6 +61,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def my_items
+    @items = Item.where(author_id: current_user.id)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
