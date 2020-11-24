@@ -3,7 +3,8 @@
 <p>
   <strong>Name:</strong>
   <%= @group.name %>
-  <%= image_tag @group.image %>
+  <%= image_tag @group.image, :class => 'col-3' %>
+  <%= @group.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |

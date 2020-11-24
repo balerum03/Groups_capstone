@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :login?
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
 
   # GET /users
   # GET /users.json
@@ -62,7 +64,21 @@ class UsersController < ApplicationController
   end
 
   def my_items
-    @items = Item.where(author_id: current_user.id)
+    @items = []
+    Item.where(author_id: current_user.id).reverse_order.each do |item|
+      if !item.groups.empty?
+        @items << item
+      end
+    end
+  end
+
+  def my_external_items
+    @e_items = []
+    Item.where(author_id: current_user.id).reverse_order.each do |item|
+      if item.groups.empty?
+        @e_items << item
+      end
+    end
   end
 
   private
@@ -74,5 +90,9 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:user_name)
+    end
+
+    def login?
+      redirect_to login_path if current_user.nil?
     end
 end
