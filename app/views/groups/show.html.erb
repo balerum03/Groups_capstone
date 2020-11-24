@@ -5,7 +5,12 @@
   <%= @group.name %>
   <%= image_tag @group.image, :class => 'col-3' %>
   <%= @group.created_at %>
-</p>
 
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+  <% @group.items.each do |i| %>
+    </br>
+    <tr>
+      <td><%= i.name %></td>
+      <td><%= i.created_at %></td>
+    </tr>
+  <% end %>
+</p>
