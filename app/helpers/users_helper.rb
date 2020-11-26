@@ -1,11 +1,9 @@
 module UsersHelper
   def total_items
-    total = Item.where(author_id: current_user.id)
-    total.each do |item|
-      if item.groups.empty?
-        total.delete(item)
-      end
+    total = 0
+    @items.each do |i|
+      total += i.amount
     end
-    total.sum(:amount)
+    total
   end
 end

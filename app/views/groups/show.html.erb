@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <%= image_tag @group.image, :class => 'col-1 rounded-circle' %>
   <%= @group.name %>
-  <%= image_tag @group.image, :class => 'col-3' %>
   <%= @group.created_at %>
 
   <% @group.items.each do |i| %>
