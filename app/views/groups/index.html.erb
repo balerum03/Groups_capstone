@@ -12,14 +12,14 @@
 
   <tbody>
     <% @groups.each do |group| %>
-      <tr>
-        <td><%= group.name %></td>
-        <td><%= image_tag group.image, :class => 'col-1' %> </td>
-        <td><%= group.created_at %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+          <%= link_to edit_group_path(group) do %>
+            <%= image_tag group.image, :class => 'col-1 rounded-circle h-25' %>
+            <%= group.name %>
+            <%= group.created_at %>
+          <% end %>
+            <%= link_to 'Show', group %>
+            <%= link_to 'Edit', edit_group_path(group) %>
+            <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </tbody>
 </table>
