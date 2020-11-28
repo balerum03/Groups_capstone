@@ -1,13 +1,28 @@
 @import "bootstrap";
 
 * {
+  margin: 0;
   color: #434b54;
+  padding: 0;
+}
+
+.white-font {
+  color: white;
 }
 
 .bg-blue {
  background-color: #3778c2;
+ text-align: center;
+ color: white;
 }
 
 .bg-green {
-  background-color: #5fb523; 
+  background-color: #5fb523;
+}
+
+input {
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
 }
