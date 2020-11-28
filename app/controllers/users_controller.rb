@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  before_action :login?
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :login?, only: [:show, :edit, :update, :destroy, :index, :my_items, :my_external_items]
 
   # GET /users
   # GET /users.json
@@ -90,9 +89,5 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:user_name)
-    end
-
-    def login?
-      redirect_to login_path if current_user.nil?
     end
 end
