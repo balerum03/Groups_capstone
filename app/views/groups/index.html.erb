@@ -3,13 +3,6 @@
 <h1>Groups</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
     <% @groups.each do |group| %>
           <%= link_to edit_group_path(group) do %>
@@ -17,9 +10,6 @@
             <%= group.name %>
             <%= group.created_at %>
           <% end %>
-            <%= link_to 'Show', group %>
-            <%= link_to 'Edit', edit_group_path(group) %>
-            <%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </tbody>
 </table>
