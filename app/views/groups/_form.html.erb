@@ -12,13 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.file_field :image %>
+    <div class="field text-center">
+      <%= form.label :name, class: "d-flex row justify-content-center font-weight-bolder m-0 p-0 pb-2" %>
+      <%= form.text_field :name, class: "mb-4"%>
+    </div>
+    <div class="field text-center">
+      <%= form.label :image, class: "d-flex row justify-content-center font-weight-bolder m-0 p-0 pb-2" %>
+      <%= form.file_field :image, class: "mb-4" %>
+    </div>
     <%= form.hidden_field 'user_id', :value => current_user.id %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions d-flex justify-content-center bg-green py-3">
+    <%= form.submit "Create New Group", class: "bg-green white-font w-25 font-weight-bolder text-uppercase border-0 p-1" %>
   </div>
 <% end %>
