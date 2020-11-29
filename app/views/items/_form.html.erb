@@ -11,17 +11,17 @@
     </div>
   <% end %>
     <%= form.hidden_field 'author_id', :value => current_user.id %>
-  <div class="field">
-    <%= form.label :name %>
+  <div class="field text-center">
+    <%= form.label :name, class: "d-flex row justify-content-center font-weight-bolder m-0 p-0 pb-2" %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+  <div class="field text-center">
+    <%= form.label :amount, class: "d-flex row justify-content-center font-weight-bolder m-0 p-0 pb-2" %>
+    <%= form.number_field :amount, class: "mb-4" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions d-flex justify-content-center bg-green py-3">
+    <%= form.submit "Create Item", class: "bg-green white-font w-25 font-weight-bolder text-uppercase border-0 p-1"  %>
   </div>
 <% end %>
