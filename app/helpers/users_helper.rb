@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module UsersHelper
   def total_items
     total = 0

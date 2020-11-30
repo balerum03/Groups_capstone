@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :login?, only: [:show, :edit, :update, :destroy, :index, :my_items, :my_external_items]
+  before_action :set_user, only: %i[show edit update destroy]
+  before_action :login?, only: %i[show edit update destroy index my_items my_external_items]
 
   # GET /users
   # GET /users.json
@@ -10,8 +12,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
-  end
+  def show; end
 
   # GET /users/new
   def new
@@ -19,8 +20,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /users
   # POST /users.json
@@ -65,29 +65,26 @@ class UsersController < ApplicationController
   def my_items
     @items = []
     Item.where(author_id: current_user.id).reverse_order.each do |item|
-      if !item.groups.empty?
-        @items << item
-      end
+      @items << item unless item.groups.empty?
     end
   end
 
   def my_external_items
     @e_items = []
     Item.where(author_id: current_user.id).reverse_order.each do |item|
-      if item.groups.empty?
-        @e_items << item
-      end
+      @e_items << item if item.groups.empty?
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:user_name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_params
+    params.require(:user).permit(:user_name)
+  end
 end
