@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# rubocop: disable Layout/LineLength
 module ApplicationHelper
   def log_or_not
     log_status = []
@@ -16,3 +15,4 @@ module ApplicationHelper
     log_status
   end
 end
+# rubocop: enable Layout/LineLength
