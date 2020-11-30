@@ -8,14 +8,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="d-flex h-100 fill">
-    <div class="col-2 h-100 p-4 position-relative fill bg-blue">
-      <%= log_or_not[0] %></br>
+  <body class="d-flex h-100">
+    <div class="col-2 h-100 p-4 position-fixed bg-blue ml-0 pl-0">
+      <p class="font-weight-bolder bg-blue h5"><%= log_or_not[0] %></p></br>
       <%= log_or_not[1] %></br>
       <%= log_or_not[2] %></br>
-      <%= log_or_not[3] %>
+      <%= log_or_not[3] %></br>
+      <%= log_or_not[4] %>
     </div>
-      <div class="col-10 px-0">
+      <div class="col-10 px-0 nav-margin">
         <%= yield %>
       </div>
   </body>
