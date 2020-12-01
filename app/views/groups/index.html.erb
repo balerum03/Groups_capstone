@@ -4,10 +4,10 @@
 
 <table>
   <tbody>
-    <div class="d-flex justify-content-center flex-row w-100">
+    <div class="d-flex justify-content-center row w-100">
     <% @groups.each do |group| %>
     <div class="card mt-2 mb-1 w-75">
-          <%= link_to edit_group_path(group) do %>
+          <%= link_to group_items_path(group) do %>
           <div class="row">
             <%= image_tag group.image, :class => 'col-2 rounded card-img-left py-1 ml-2' %>
               <div class="justify-items-center w-100 text-center col-9">

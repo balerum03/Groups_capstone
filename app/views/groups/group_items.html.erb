@@ -1,0 +1,23 @@
+<p class="h1 bg-blue w-100 py-2 m-0 p-0 text-capitalize">Items in <%= @group.name %></p>
+<body>
+  <div class="d-flex justify-content-center row w-100">
+  <% if !@e_items.empty? %>
+  <% @e_items.each do |item| %>
+    <div class="card my-2 flex-row w-75">
+      <div class="justify-items-center w-100 text-center">
+        <div class="w-100 h-75 d-flex flex-row">
+          <p class="w-50 text-right align-items-center"><%= item.name %></p>
+          <p class="font-weight-bolder w-50 text-right pr-2 align-items-center">Amount: <%= item.amount%></p>
+        </div>
+          <p class="d-flex text-left mb-5 align-items-end"><%= item.created_at.to_date %></p>
+      </div>
+    </div>
+  <% end %>
+  <% else %>
+    <p>There are not items in this group</p>
+  <% end %>
+  </div>
+  <div class="actions d-flex justify-content-center bg-green py-3 text-center">
+    <%= link_to 'Add New Item', new_item_path, :class => "bg-green white-font w-25 font-weight-bolder text-uppercase border-0 p-1"%>
+  </div>
+</body>

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy', as: 'logout'
   get 'users/:id/my_items', to: 'users#my_items', as: 'my_items'
   get 'users/:id/my_external_items', to: 'users#my_external_items', as: 'my_external_items'
+  get 'groups/:id/group_items', to: 'groups#group_items', as: 'group_items'
 end
