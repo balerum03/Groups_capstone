@@ -8,7 +8,8 @@ For example: if you need to buy milk, you can create the group kitchen and say t
 - Ruby v2.7.0
 - Ruby on Rails 6.0.3.4
 - Live demo link
-
+### Live demo version
+[live demo link](https://damp-dusk-97692.herokuapp.com/login)
 ## How to use the app
 For you to try the app locally you can follow the next steps.
 
