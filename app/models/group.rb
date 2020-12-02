@@ -4,5 +4,5 @@ class Group < ApplicationRecord
   has_many :items, through: :group_of_items
   has_one_attached :image, dependent: :destroy
 
-  scope :with_image, -> {includes(image: :blob)}
+  scope :with_image, -> { includes(image: :blob) }
 end

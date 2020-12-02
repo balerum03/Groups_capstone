@@ -63,14 +63,14 @@ class UsersController < ApplicationController
 
   def my_items
     @items = []
-    Item.where(author_id: current_user.id).includes(groups: {image_attachment: [:blob]}).reverse_order.each do |item|
+    Item.where(author_id: current_user.id).includes(groups: { image_attachment: [:blob] }).reverse_order.each do |item|
       @items << item unless item.groups.empty?
     end
   end
 
   def my_external_items
     @e_items = []
-    Item.where(author_id: current_user.id).includes(groups: {image_attachment: [:blob]}).reverse_order.each do |item|
+    Item.where(author_id: current_user.id).includes(groups: { image_attachment: [:blob] }).reverse_order.each do |item|
       @e_items << item if item.groups.empty?
     end
   end
