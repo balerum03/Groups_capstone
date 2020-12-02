@@ -2,12 +2,6 @@
 
 Rails.application.configure do
 
-  config.after_initialize do
-    Bullet.enable = false
-    Bullet.alert = false
-    Bullet.console = false
-    Bullet.n_plus_one_query_enable = false
-  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
