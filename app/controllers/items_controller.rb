@@ -1,12 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
   before_action :login?
-  # GET /items
-  # GET /items.json
-  def index
-    @items = Item.all
-  end
-
+  
   # GET /items/new
   def new
     @item = Item.new
