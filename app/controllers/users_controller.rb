@@ -2,12 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
   before_action :login?, only: %i[show edit update destroy index my_items my_external_items]
 
-  # GET /users
-  # GET /users.json
-  def index
-    @users = User.all
-  end
-
   # GET /users/new
   def new
     @user = User.new

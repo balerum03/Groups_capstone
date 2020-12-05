@@ -6,11 +6,7 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all.includes(image_attachment: :blob)
   end
-
-  # GET /groups/1
-  # GET /groups/1.json
-  def show; end
-
+  
   # GET /groups/new
   def new
     @group = Group.new
