@@ -35,9 +35,9 @@ You can run just by typing `rspec` in your console, take into consideration that
 ## Author
 Adan Fernandez Bonilla
 
-- [Github](https://github.com/balerum03)
-- [LinkedIn](https://www.linkedin.com/in/adan-fernandez-bonilla/)
-- [Twitter](https://twitter.com/balerum03)
+- [Github: balerum03](https://github.com/balerum03)
+- [LinkedIn: Adan Fernandez Bonilla](https://www.linkedin.com/in/adan-fernandez-bonilla/)
+- [Twitter: balerum03](https://twitter.com/balerum03)
 
 ## 🤝 Contributing
 
@@ -48,3 +48,8 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+
+## Credits
+
+📄💻 Layouts design by <a href="https://www.behance.net/gregoirevella" target="_blank">Gregoire Vella</a>
