@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe ItemsController, type: :routing do
   describe 'routing' do
-
     it 'routes to #new' do
       expect(get: '/items/new').to route_to('items#new')
     end

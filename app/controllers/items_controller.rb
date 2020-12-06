@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
   before_action :login?
-  
+
   # GET /items/new
   def new
     @item = Item.new
@@ -32,6 +32,6 @@ class ItemsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def item_params
-    params.require(:item).permit(:author_id, :name, :amount, group_ids:[])
+    params.require(:item).permit(:author_id, :name, :amount, group_ids: [])
   end
 end

@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all.includes(image_attachment: :blob)
   end
-  
+
   # GET /groups/new
   def new
     @group = Group.new
@@ -27,7 +27,6 @@ class GroupsController < ApplicationController
       end
     end
   end
-
 
   def group_items
     @e_items = @group.items
