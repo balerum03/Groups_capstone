@@ -1,0 +1,13 @@
+<p id=”alert” class="p-0 m-0"><%= alert %></p>
+<p class="bg-blue w-100 py-2 h1">Login</p>
+<%= form_tag '/login' do %>
+  <div class="field text-center">
+    <p class="d-flex row justify-content-center font-weight-bolder m-0 p-0"><%= label_tag :username %></p>
+    <div class="mb-4">
+      <%= text_field_tag :user_name %>
+    </div>
+  </div>
+  <div class="actions d-flex justify-content-center bg-green py-3">
+    <%= submit_tag 'Login' , :class => "bg-green white-font w-25 font-weight-bolder text-uppercase border-0 p-1" %>
+  </div>
+<% end %>

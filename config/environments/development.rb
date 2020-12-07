@@ -1,4 +1,14 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
+
+  # config.after_initialize do
+  #   Bullet.enable        = true
+  #   Bullet.alert         = true
+  #   Bullet.console       = true
+  #   # Detect N+1 queries
+  #   Bullet.n_plus_one_query_enable     = true
+  # end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

@@ -1,0 +1,34 @@
+@import "bootstrap";
+
+* {
+  color: #434b54;
+  font-family: 'proxima-nova', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.white-font {
+  color: white;
+}
+
+.bg-blue {
+  background-color: #3778c2;
+  color: white;
+  text-align: center;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+input {
+  border-bottom-style: solid;
+  border-left-style: none;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.nav-margin {
+  position: relative;
+  margin-left: 16.6666666667%;
+}

@@ -1,0 +1,28 @@
+<p id=”notice” class="p-0 m-0"><%= notice %></p>
+
+<p class="h1 bg-blue w-100 py-2 m-0 p-0 text-capitalize">Groups<p/>
+
+<table>
+  <tbody>
+    <div class="d-flex justify-content-center row w-100">
+    <% @groups.each do |group| %>
+    <div class="card mt-2 mb-1 w-75">
+          <%= link_to group_items_path(group) do %>
+          <div class="row">
+            <%= image_tag group.image, :class => 'col-2 rounded card-img-left py-1 ml-2' %>
+              <div class="justify-items-center w-100 text-center col-9">
+                <p class="font-weight-bolder h-50 mt-2"><%= group.name%></p>
+                <p class="text-capitalize h-50">created at: <%= group.created_at.to_date %></p>
+              </div>
+            </div>
+          <% end %>
+    </div>
+    <% end %>
+    </div>
+  </tbody>
+</table>
+
+<br>
+<div class="actions d-flex justify-content-center bg-green py-3 text-center">
+  <%= link_to 'New Group', new_group_path, :class => "bg-green white-font w-25 font-weight-bolder text-uppercase border-0 p-1" %>
+</div>

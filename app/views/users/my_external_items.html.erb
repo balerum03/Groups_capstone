@@ -1,0 +1,16 @@
+<p class="h1 bg-blue w-100 py-2 m-0 p-0 text-capitalize">All My External Items</p>
+<body>
+  <div class="d-flex justify-content-center row w-100">
+    <% @e_items.each do |item| %>
+      <div class="card my-2 flex-row w-75">
+        <div class="justify-items-center w-100 text-center">
+          <div class="w-100 h-75 d-flex flex-row">
+            <p class="w-50 text-right align-items-center"><%= item.name %></p>
+            <p class="font-weight-bolder w-50 text-right pr-2 align-items-center"><%= item.amount %></p>
+          </div>
+            <p class="d-flex text-left align-items-end pb-1"><%= item.created_at.to_date %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</body>
