@@ -10,13 +10,17 @@ For example: if you need to buy milk, you can create the group kitchen and say t
 - Live demo link
 ### Live demo version
 [live demo link](https://salty-beyond-43885.herokuapp.com)
+
 ## How to use the app
 For you to try the app locally you can follow the next steps.
-
 ### Prerequisites
 - Ruby: 2.7.0
 - Rails: 6.0.0
 - Postgres: >=9.5
+### To get a local copy up and running follow these simple example steps.
+- Go to the main page of the repo.
+- Press the "Code" button and get the repo link.
+- Then run `git clone https://github.com/balerum03/Groups_capstone.git` in your console to download the project
 ### set-up
 - Install all gems by running  `bundle install `
 - Create the database using `rails db:create `
